@@ -1,0 +1,23 @@
+version: 2
+models:
+    - name: student_details
+      description:  '{{ doc("table_events") }}'
+      columns:
+          - name: std_id
+            description: "The primary key for this table"
+            tests:
+                - unique
+                - not_null
+ 
+    - name: student_results
+      description: "here we are having student results"
+      columns:
+          - name: std_id
+            description: "The primary key for this table"
+            tests:
+                - unique
+                - not_null
+                - relationships:
+                    to: ref('student_details')
+                    field: std_id
+       

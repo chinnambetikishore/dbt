@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: student
+    tables:
+      - name: student_details
+      - name: student_results
+
+ 
